@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>html,body{margin:0;background:#f0efec;font-family:'Noto Sans JP',sans-serif;color:#141414}a{color:#141414;text-decoration:none}a:hover{color:#d4642b}*{box-sizing:border-box}</style>
+</helmet>
+<div style="padding:48px 56px;display:flex;flex-direction:column;gap:56px;width:max-content">
+  <div style="max-width:720px">
+    <div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#d4642b">KYUKEN SOGO KAIHATSU / RECRUIT SITE — HI-FI WIREFRAME</div>
+    <h1 style="margin:16px 0 0;font:700 28px/1.4 'Noto Sans JP',sans-serif">九建総合開発 採用サイト ワイヤーフレーム</h1>
+    <p style="margin:12px 0 0;font:400 13px/1.9 'Noto Sans JP',sans-serif;color:#555">Desktop 1440px（コンテンツ幅1240 / 左右100px / 12col・24px gutter）と Mobile 390px（左右20px）。各アートボードはそのまま操作できます。ラベルをクリックすると単体で開きます。</p>
+    <div style="display:flex;gap:24px;margin-top:16px;font:400 11px/1.6 'IBM Plex Mono',monospace;color:#6b6b6b"><span>■ 斜線 = 写真・動画領域（比率とサイズを記載）</span><span>■ 「詳細確認中」= 未確定情報</span><span>■ #d4642b = CTA / 強調（仮）</span></div>
+  </div>
+
+  <div style="display:flex;gap:56px;align-items:flex-start">
+    <div style="display:flex;flex-direction:column;gap:12px"><a href="top-desktop.html" style="font:500 12px/1 'IBM Plex Mono',monospace;letter-spacing:.1em">01 TOP — DESKTOP 1440 ↗</a><iframe src="top-desktop.html" title="TOP Desktop" style="width:1440px;height:13600px;border:1px solid #d0d0d0;background:#fff;display:block"></iframe></div>
+    <div style="display:flex;flex-direction:column;gap:12px"><a href="top-mobile.html" style="font:500 12px/1 'IBM Plex Mono',monospace;letter-spacing:.1em">02 TOP — MOBILE 390 ↗</a><iframe src="top-mobile.html" title="TOP Mobile" style="width:390px;height:13600px;border:1px solid #d0d0d0;background:#fff;display:block"></iframe></div>
+  </div>
+
+  <div style="display:flex;gap:56px;align-items:flex-start">
+    <div style="display:flex;flex-direction:column;gap:12px"><a href="interview-desktop.html" style="font:500 12px/1 'IBM Plex Mono',monospace;letter-spacing:.1em">03 INTERVIEW LIST — DESKTOP ↗</a><iframe src="interview-desktop.html" title="Interview Desktop" style="width:1440px;height:3400px;border:1px solid #d0d0d0;background:#fff;display:block"></iframe></div>
+    <div style="display:flex;flex-direction:column;gap:12px"><a href="interview-mobile.html" style="font:500 12px/1 'IBM Plex Mono',monospace;letter-spacing:.1em">04 INTERVIEW LIST — MOBILE ↗</a><iframe src="interview-mobile.html" title="Interview Mobile" style="width:390px;height:6400px;border:1px solid #d0d0d0;background:#fff;display:block"></iframe></div>
+  </div>
+
+  <div style="display:flex;gap:56px;align-items:flex-start">
+    <div style="display:flex;flex-direction:column;gap:12px"><a href="interview-detail-desktop.html" style="font:500 12px/1 'IBM Plex Mono',monospace;letter-spacing:.1em">05 INTERVIEW DETAIL — DESKTOP ↗</a><iframe src="interview-detail-desktop.html" title="Interview Detail Desktop" style="width:1440px;height:6200px;border:1px solid #d0d0d0;background:#fff;display:block"></iframe></div>
+    <div style="display:flex;flex-direction:column;gap:12px"><a href="interview-detail-mobile.html" style="font:500 12px/1 'IBM Plex Mono',monospace;letter-spacing:.1em">06 INTERVIEW DETAIL — MOBILE ↗</a><iframe src="interview-detail-mobile.html" title="Interview Detail Mobile" style="width:390px;height:6200px;border:1px solid #d0d0d0;background:#fff;display:block"></iframe></div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Barlow+Condensed:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>html,body{margin:0;background:#fff;color:#141414;font-family:'Noto Sans JP',sans-serif;-webkit-font-smoothing:antialiased}a{color:#141414;text-decoration:none}a:hover{color:#d4642b}*{box-sizing:border-box}html{scroll-behavior:smooth}</style>
+</helmet>
+<div data-screen-label="TOP Mobile" style="width:390px;margin:0 auto;background:#fff;position:relative">
+
+<header style="position:sticky;top:0;margin-bottom:-64px;width:390px;height:64px;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:0 12px 0 20px;background:{{ headerBg }};border-bottom:{{ headerLine }}">
+  <a href="#top" style="display:flex;align-items:center;gap:10px"><span style="width:30px;height:30px;background:#141414"></span><span style="font:700 13px/1.2 'Noto Sans JP',sans-serif">九建総合開発<span style="display:block;font:400 9px/1.2 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#6b6b6b;margin-top:2px">RECRUIT</span></span></a>
+  <div style="display:flex;align-items:center;gap:8px">
+    <a href="#entry" style="display:inline-flex;align-items:center;justify-content:center;height:44px;padding:0 18px;background:#d4642b;color:#fff;font:600 14px/1 'Barlow Condensed',sans-serif;letter-spacing:.16em">ENTRY</a>
+    <button onClick="{{ toggleMenu }}" aria-label="menu" style="width:44px;height:44px;border:0;background:transparent;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;cursor:pointer"><span style="width:22px;height:2px;background:#141414"></span><span style="width:22px;height:2px;background:#141414"></span></button>
+  </div>
+</header>
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+<nav style="position:fixed;top:64px;left:0;width:390px;bottom:0;z-index:49;background:#fff;padding:32px 20px;display:flex;flex-direction:column;gap:0;font:500 20px/1 'Noto Sans JP',sans-serif">
+  <a href="#work" onClick="{{ toggleMenu }}" style="padding:20px 0;border-bottom:1px solid #dcdcdc;display:flex;justify-content:space-between">仕事を知る<span style="font:12px 'IBM Plex Mono',monospace;color:#6b6b6b">WORK</span></a>
+  <a href="#skill" onClick="{{ toggleMenu }}" style="padding:20px 0;border-bottom:1px solid #dcdcdc;display:flex;justify-content:space-between">技術・成長<span style="font:12px 'IBM Plex Mono',monospace;color:#6b6b6b">SKILL</span></a>
+  <a href="interview-mobile.html" style="padding:20px 0;border-bottom:1px solid #dcdcdc;display:flex;justify-content:space-between">人を知る<span style="font:12px 'IBM Plex Mono',monospace;color:#6b6b6b">PEOPLE</span></a>
+  <a href="#environment" onClick="{{ toggleMenu }}" style="padding:20px 0;border-bottom:1px solid #dcdcdc;display:flex;justify-content:space-between">働く環境<span style="font:12px 'IBM Plex Mono',monospace;color:#6b6b6b">ENVIRONMENT</span></a>
+  <a href="#recruit" onClick="{{ toggleMenu }}" style="padding:20px 0;border-bottom:1px solid #dcdcdc;display:flex;justify-content:space-between">募集要項<span style="font:12px 'IBM Plex Mono',monospace;color:#6b6b6b">RECRUIT</span></a>
+  <a href="#entry" onClick="{{ toggleMenu }}" style="margin-top:32px;display:flex;align-items:center;justify-content:center;height:60px;background:#d4642b;color:#fff;font:600 16px/1 'Barlow Condensed',sans-serif;letter-spacing:.2em">ENTRY　応募する</a>
+</nav>
+</sc-if>
+
+<!-- 01 FV -->
+<section id="top" data-screen-label="01 FV" style="position:relative;height:780px;background:repeating-linear-gradient(135deg,#ececec 0 10px,#e3e3e3 10px 20px)">
+  <div style="position:absolute;top:80px;left:20px;right:20px;font:10px/1.6 'IBM Plex Mono',monospace;color:#6f6f6f">BG: 縦構図 390×780 / 人物・機械は上部に配置、下部はコピー領域</div>
+  <div style="position:absolute;left:20px;right:20px;bottom:56px">
+    <h1 style="margin:0;font:700 44px/1.35 'Noto Sans JP',sans-serif;letter-spacing:.02em">見えない地中を、<br>五感で読む。</h1>
+    <p style="margin:18px 0 0;font:500 20px/1.6 'Noto Sans JP',sans-serif">AI時代に、<br>手に職という強さを。</p>
+    <p style="margin:18px 0 0;font:400 14px/1.9 'Noto Sans JP',sans-serif;color:#333">音を聞く。振動を感じる。数字を見る。土を読む。<br>巨大な建物を支える基礎工事には、機械だけでは完結できない判断がある。</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:28px">
+      <a href="#work" style="display:flex;align-items:center;justify-content:center;height:56px;background:#141414;color:#fff;font:500 14px/1 'Noto Sans JP',sans-serif">九建の仕事を知る</a>
+      <a href="#recruit" style="display:flex;align-items:center;justify-content:center;height:56px;border:1px solid #141414;background:rgba(255,255,255,.7);font:500 14px/1 'Noto Sans JP',sans-serif">募集要項を見る</a>
+    </div>
+    <div style="display:flex;gap:14px;margin-top:24px;font:11px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#444"><span>音</span><span>振動</span><span>メーター</span><span>土</span><span>手応え</span><span>判断</span></div>
+  </div>
+  <div style="position:absolute;left:50%;bottom:12px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px"><span style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.3em">SCROLL</span><span style="width:1px;height:24px;background:#141414"></span></div>
+</section>
+
+<!-- 02 CONCEPT -->
+<section id="concept" data-screen-label="02 CONCEPT" style="padding:96px 20px">
+  <div style="display:flex;align-items:center;gap:10px;font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#d4642b"><span style="width:24px;height:1px;background:#d4642b"></span>CONCEPT</div>
+  <h2 style="margin:20px 0 0;font:700 36px/1.4 'Noto Sans JP',sans-serif;letter-spacing:.02em">AI時代に、<br>手に職という強さを。</h2>
+  <div style="margin-top:40px;font:400 15px/2.1 'Noto Sans JP',sans-serif;color:#333">
+    <p style="margin:0">AIや機械が進化しても、<br>現場から「人」がいなくなるわけではない。</p>
+    <p style="margin:24px 0 0">私たちが向き合うのは、<br>目には見えない地面の下。</p>
+    <p style="margin:24px 0 0">聞こえる音。<br>手に伝わる振動。<br>動き続けるメーター。<br>掘り出された土。</p>
+    <p style="margin:24px 0 0">そのすべてから状況を読み取り、<br>「今、どうするべきか」を判断する。</p>
+    <p style="margin:24px 0 0">九建で身につくのは、<br>機械を動かすだけの技術ではありません。</p>
+    <p style="margin:40px 0;padding:28px 0;border-top:1px solid #141414;border-bottom:1px solid #141414;font:700 26px/1.5 'Noto Sans JP',sans-serif;color:#141414">現場を読み、<br>判断する技術です。</p>
+    <p style="margin:0">これからの時代にも残り続ける技術を、<br>自分の手に。</p>
+  </div>
+</section>
+
+<!-- 03 WORK -->
+<section id="work" data-screen-label="03 WORK" style="padding:72px 20px 80px;border-top:1px solid #e5e5e5">
+  <div style="display:flex;align-items:center;gap:10px;font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#d4642b"><span style="width:24px;height:1px;background:#d4642b"></span>WORK</div>
+  <h2 style="margin:20px 0 0;font:700 32px/1.4 'Noto Sans JP',sans-serif;letter-spacing:.02em">地面の下に、<br>九建の仕事がある。</h2>
+  <p style="margin:24px 0 0;font:400 15px/1.9 'Noto Sans JP',sans-serif;color:#333">ビルもマンションも橋も、地上に見えている部分だけで立っているわけではありません。建物の重さを地中深くの固い地盤（支持層）まで伝える「杭」と「基礎」をつくる。それが九建の仕事、基礎工事です。</p>
+  <div style="margin-top:40px;border:1px solid #141414;padding:24px 20px;position:relative">
+    <div style="position:absolute;top:8px;right:10px;font:9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#8a8a8a">DIAGRAM 350×560</div>
+    <div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#6b6b6b">地上</div>
+    <div style="display:flex;align-items:flex-end;gap:10px;height:120px;margin-top:12px"><div style="width:60px;height:120px;background:#ddd"></div><div style="width:90px;height:86px;background:#ddd"></div><div style="width:70px;height:54px;background:#ddd"></div><div style="flex:1;height:28px;background:#ddd"></div></div>
+    <div style="display:flex;gap:14px;margin-top:6px;font:11px/1.6 'Noto Sans JP',sans-serif;color:#6b6b6b"><span>ビル</span><span>マンション</span><span>橋</span><span>公共施設</span></div>
+    <div style="display:flex;align-items:center;gap:12px;margin-top:16px"><span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;width:56px">地表</span><span style="flex:1;height:3px;background:#141414"></span></div>
+    <div style="display:flex;align-items:center;gap:12px;margin-top:8px"><span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;width:56px">基礎</span><span style="flex:1;height:36px;background:repeating-linear-gradient(135deg,#bdbdbd 0 6px,#a8a8a8 6px 12px)"></span></div>
+    <div style="display:flex;gap:12px"><span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;width:56px;padding-top:60px">杭<span style="display:block;font:10px/1.6 'Noto Sans JP',sans-serif;color:#6b6b6b;margin-top:6px;letter-spacing:0">重さを支持層まで伝える</span></span><span style="flex:1;display:flex;justify-content:space-around;height:180px;background:repeating-linear-gradient(0deg,#f4f4f4 0 12px,#fff 12px 24px)"><span style="width:18px;background:#141414"></span><span style="width:18px;background:#141414"></span><span style="width:18px;background:#141414"></span><span style="width:18px;background:#141414"></span></span></div>
+    <div style="display:flex;align-items:center;gap:12px"><span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;width:56px;color:#d4642b">支持層</span><span style="flex:1;height:44px;background:repeating-linear-gradient(90deg,#d4642b 0 8px,#e79a6c 8px 16px)"></span></div>
+  </div>
+  <div style="display:grid;gap:40px;margin-top:64px">
+    <div><div style="aspect-ratio:16/10;background:repeating-linear-gradient(135deg,#ececec 0 10px,#e3e3e3 10px 20px);display:flex;align-items:flex-end;padding:12px;color:#6f6f6f;font:10px/1.5 'IBM Plex Mono',monospace">IMG 16:10 / 場所打ち杭</div><div style="margin-top:18px;font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#d4642b">METHOD 01</div><h3 style="margin:8px 0 0;font:700 22px/1.4 'Noto Sans JP',sans-serif">場所打ち杭</h3><p style="margin:10px 0 0;font:400 14px/1.9 'Noto Sans JP',sans-serif;color:#333">大型の掘削機で地中に穴を掘り、その場で鉄筋とコンクリートを流し込んで杭をつくる工法。大規模建築物の基礎に用いられます。</p></div>
+    <div><div style="aspect-ratio:16/10;background:repeating-linear-gradient(135deg,#ececec 0 10px,#e3e3e3 10px 20px);display:flex;align-items:flex-end;padding:12px;color:#6f6f6f;font:10px/1.5 'IBM Plex Mono',monospace">IMG 16:10 / 既製杭</div><div style="margin-top:18px;font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#d4642b">METHOD 02</div><h3 style="margin:8px 0 0;font:700 22px/1.4 'Noto Sans JP',sans-serif">既製杭</h3><p style="margin:10px 0 0;font:400 14px/1.9 'Noto Sans JP',sans-serif;color:#333">工場でつくられたコンクリート杭や鋼管杭を、パイルドライバーで地中に打ち込む・埋め込む工法。品質が安定し、工期を短縮できます。</p></div>
+    <div><div style="aspect-ratio:16/10;background:repeating-linear-gradient(135deg,#ececec 0 10px,#e3e3e3 10px 20px);display:flex;align-items:flex-end;padding:12px;color:#6f6f6f;font:10px/1.5 'IBM Plex Mono',monospace">IMG 16:10 / 地盤改良</div><div style="margin-top:18px;font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#d4642b">METHOD 03</div><h3 style="margin:8px 0 0;font:700 22px/1.4 'Noto Sans JP',sans-serif">地盤改良</h3><p style="margin:10px 0 0;font:400 14px/1.9 'Noto Sans JP',sans-serif;color:#333">軟弱な地盤にセメント系の固化材を混ぜ、地盤そのものを強くする工法。建物を支える力を地面に持たせます。</p></div>
+  </div>
+</section>
+
+<!-- 04 HUMAN SENSE × ENGINEERING -->
+<section id="sense" data-screen-label="04 HUMAN SENSE × ENGINEERING" style="padding:88px 20px 96px;background:#f5f5f4;border-top:1px solid #141414;border-bottom:1px solid #141414">
+  <div style="display:flex;align-items:center;gap:10px;font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#d4642b"><span style="width:24px;height:1px;background:#d4642b"></span>HUMAN SENSE</div>
+  <h2 style="margin:20px 0 0;font:700 38px/1.3 'Noto Sans JP',sans-serif">人だから分かる。</h2>
+  <p style="margin:20px 0 0;font:400 15px/1.9 'Noto Sans JP',sans-serif;color:#333">五感で拾った情報を組み合わせ、機械に指示を出すのは人。現場で技術者が働かせている5つの感覚。</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:40px">
+    <div style="background:#fff;border:1px solid #dcdcdc"><div style="aspect-ratio:1/1;background:repeating-linear-gradient(135deg,#ececec 0 10px,#e3e3e3 10px 20px);display:flex;align-items:flex-end;padding:10px;color:#6f6f6f;font:9px/1.5 'IBM Plex Mono',monospace">IMG 1:1 / 耳・機械</div><div style="padding:16px 14px 18px"><div style="font:600 26px/1 'Barlow Condensed',sans-serif;letter-spacing:.06em">LISTEN</div><p style="margin:8px 0 0;font:500 14px/1.6 'Noto Sans JP',sans-serif">機械の音を聞く。</p></div></div>
+    <div style="background:#fff;border:1px solid #dcdcdc"><div style="aspect-ratio:1/1;background:repeating-linear-gradient(135deg,#ececec 0 10px,#e3e3e3 10px 20px);display:flex;align-items:flex-end;padding:10px;color:#6f6f6f;font:9px/1.5 'IBM Plex Mono',monospace">IMG 1:1 / 手</div><div style="padding:16px 14px 18px"><div style="font:600 26px/1 'Barlow Condensed',sans-serif;letter-spacing:.06em">FEEL</div><p style="margin:8px 0 0;font:500 14px/1.6 'Noto Sans JP',sans-serif">振動・手応えを感じる。</p></div></div>
+    <div style="background:#fff;border:1px solid #dcdcdc"><div style="aspect-ratio:1/1;background:repeating-linear-gradient(135deg,#ececec 0 10px,#e3e3e3 10px 20px);display:flex;align-items:flex-end;padding:10px;color:#6f6f6f;font:9px/1.5 'IBM Plex Mono',monospace">IMG 1:1 / メーター</div><div style="padding:16px 14px 18px"><div style="font:600 26px/1 'Barlow Condensed',sans-serif;letter-spacing:.06em">WATCH</div><p style="margin:8px 0 0;font:500 14px/1.6 'Noto Sans JP',sans-serif">メーターを見る。</p></div></div>
+    <div style="background:#fff;border:1px solid #dcdcdc"><div style="aspect-ratio:1/1;background:repeating-linear-gradient(135deg,#ececec 0 10px,#e3e3e3 10px 20px);display:flex;align-items:flex-end;padding:10px;color:#6f6f6f;font:9px/1.5 'IBM Plex Mono',monospace">IMG 1:1 / 土・地層</div><div style="padding:16px 14px 18px"><div style="font:600 26px/1 'Barlow Condensed',sans-serif;letter-spacing:.06em">READ</div><p style="margin:8px 0 0;font:500 14px/1.6 'Noto Sans JP',sans-serif">土・地層を読む。</p></div></div>
+  </div>
+  <div style="display:flex;justify-content:center;margin:16px 0"><span style="width:1px;height:32px;background:#141414"></span></div>
+  <div style="background:#141414;color:#fff"><div style="aspect-ratio:16/10;background:repeating-linear-gradient(135deg,#3a3a3a 0 10px,#2f2f2f 10px 20px);display:flex;align-items:flex-end;padding:12px;color:#aaa;font:10px/1.5 'IBM Plex Mono',monospace">IMG 16:10 / 判断する技術者の目</div><div style="padding:32px 24px 36px"><div style="font:600 44px/1 'Barlow Condensed',sans-serif;letter-spacing:.06em">JUDGE</div><p style="margin:14px 0 0;font:700 24px/1.5 'Noto Sans JP',sans-serif">すべてを組み合わせて<br>判断する。</p><p style="margin:16px 0 0;font:400 14px/1.9 'Noto Sans JP',sans-serif;color:#cfcfcf">音、振動、数値、土。ばらばらの情報を一つにまとめ、「今、どうするべきか」を決めるのは人。最後の判断が、建物の100年を支える。</p></div></div>
+
+  <div style="margin-top:96px;display:flex;align-items:center;gap:10px;font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#d4642b"><span style="width:24px;height:1px;background:#d4642b"></span>ENGINEERING</div>
+  <h2 style="margin:20px 0 0;font:700 38px/1.3 'Noto Sans JP',sans-serif">巨大な機械を、<br>技術で操る。</h2>
+  <div style="display:flex;margin:32px -20px 0;padding:0 20px;overflow-x:auto;gap:8px">
+    <button onClick="{{ eng0 }}" style="flex:none;height:44px;padding:0 18px;border:1px solid #141414;cursor:pointer;background:{{ engBg0 }};color:{{ engFg0 }};font:500 13px/1 'Noto Sans JP',sans-serif">パイルドライバー</button>
+    <button onClick="{{ eng1 }}" style="flex:none;height:44px;padding:0 18px;border:1px solid #141414;cursor:pointer;background:{{ engBg1 }};color:{{ engFg1 }};font:500 13px/1 'Noto Sans JP',sans-serif">全周回転掘削機</button>
+    <button onClick="{{ eng2 }}" style="flex:none;height:44px;padding:0 18px;border:1px solid #141414;cursor:pointer;background:{{ engBg2 }};color:{{ engFg2 }};font:500 13px/1 'Noto Sans JP',sans-serif">クローラクレーン</button>
+  </div>
+  <div style="margin:24px -20px 0;aspect-ratio:4/5;background:repeating-linear-gradient(135deg,#ececec 0 10px,#e3e3e3 10px 20px);display:flex;align-items:flex-end;padding:14px;color:#6f6f6f;font:10px/1.5 'IBM Plex Mono',monospace">IMG 4:5 全幅 390×488 / {{ eng.name }}</div>
+  <div style="background:#fff;border:1px solid #dcdcdc;padding:28px 20px 32px">
+    <div style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#6b6b6b">MACHINE {{ eng.no }} / 03</div>
+    <h3 style="margin:12px 0 0;font:700 24px/1.4 'Noto Sans JP',sans-serif">{{ eng.name }}</h3>
+    <p style="margin:14px 0 0;font:400 14px/1.9 'Noto Sans JP',sans-serif;color:#333">{{ eng.desc }}</p>
+    <div style="margin-top:24px;padding-top:20px;border-top:1px solid #dcdcdc"><div style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#d4642b">HUMAN JUDGEMENT</div><p style="margin:10px 0 0;font:500 15px/1.9 'Noto Sans JP',sans-serif">{{ eng.judge }}</p></div>
+  </div>
+</section>
+
+<!-- 05 PROJECT -->
+<section id="project" data-screen-label="05 PROJECT" style="padding:88px 20px 80px">
+  <div style="display:flex;align-items:center;gap:10px;font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#d4642b"><span style="width:24px;height:1px;background:#d4642b"></span>PROJECT</div>
+  <h2 style="margin:20px 0 0;font:700 32px/1.4 'Noto Sans JP',sans-serif">完成したら、<br>見えなくなる仕事。</h2>
+  <div style="margin:32px -20px 0;aspect-ratio:4/5;background:repeating-linear-gradient(135deg,#ececec 0 10px,#e3e3e3 10px 20px);display:flex;align-items:flex-end;padding:14px;color:#6f6f6f;font:10px/1.5 'IBM Plex Mono',monospace">IMG 4:5 全幅 / 完成した建物</div>
+  <div style="margin-top:32px;font:400 15px/2 'Noto Sans JP',sans-serif;color:#333"><p style="margin:0">私たちが施工した基礎は、<br>建物が完成した瞬間から、<br>見えなくなります。</p><p style="margin:20px 0 0">けれど、<br>その建物がそこにある限り、<br>地中からずっと支え続ける。</p><p style="margin:20px 0 0">見えない場所から、<br>街を支える仕事です。</p></div>
+  <div style="display:grid;gap:32px;margin-top:56px">
+    <div><div style="aspect-ratio:4/5;background:repeating-linear-gradient(135deg,#ececec 0 10px,#e3e3e3 10px 20px);display:flex;align-items:flex-end;padding:12px;color:#6f6f6f;font:10px/1.5 'IBM Plex Mono',monospace">IMG 4:5 / 施工中の現場（大）</div><div style="display:flex;gap:12px;margin-top:14px;font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#6b6b6b"><span>01</span><span>場所打ち杭</span><span>熊本県</span></div><h3 style="margin:8px 0 0;font:700 18px/1.5 'Noto Sans JP',sans-serif">高層マンション 基礎工事</h3></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div><div style="aspect-ratio:3/4;background:repeating-linear-gradient(135deg,#ececec 0 10px,#e3e3e3 10px 20px);display:flex;align-items:flex-end;padding:10px;color:#6f6f6f;font:9px/1.5 'IBM Plex Mono',monospace">IMG 3:4</div><div style="display:flex;gap:10px;margin-top:12px;font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#6b6b6b"><span>02</span><span>既製杭</span></div><h3 style="margin:6px 0 0;font:700 15px/1.5 'Noto Sans JP',sans-serif">公共施設 基礎工事</h3></div>
+      <div><div style="aspect-ratio:3/4;background:repeating-linear-gradient(135deg,#ececec 0 10px,#e3e3e3 10px 20px);display:flex;align-items:flex-end;padding:10px;color:#6f6f6f;font:9px/1.5 'IBM Plex Mono',monospace">IMG 3:4</div><div style="display:flex;gap:10px;margin-top:12px;font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#6b6b6b"><span>03</span><span>地盤改良</span></div><h3 style="margin:6px 0 0;font:700 15px/1.5 'Noto Sans JP',sans-serif">物流施設 地盤改良</h3></div>
+    </div>
+    <div><div style="aspect-ratio:16/10;background:repeating-linear-gradient(135deg,#ececec 0 10px,#e3e3e3 10px 20px);display:flex;align-items:flex-end;padding:12px;color:#6f6f6f;font:10px/1.5 'IBM Plex Mono',monospace">IMG 16:10 / 橋梁</div><div style="display:flex;gap:12px;margin-top:14px;font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#6b6b6b"><span>04</span><span>場所打ち杭</span><span>広島県</span></div><h3 style="margin:8px 0 0;font:700 18px/1.5 'Noto Sans JP',sans-serif">橋梁 基礎工事</h3></div>
+  </div>
+</section>
+
+<!-- 06 SKILL -->
+<section id="skill" data-screen-label="06 SKILL &amp; CAREER" style="padding:72px 20px 80px;border-top:1px solid #e5e5e5">
+  <div style="display:flex;align-items:center;gap:10px;font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#d4642b"><span style="width:24px;height:1px;background:#d4642b"></span>SKILL / CAREER</div>
+  <h2 style="margin:20px 0 0;font:700 32px/1.4 'Noto Sans JP',sans-serif">技術は、<br>自分に残る。</h2>
+  <p style="margin:24px 0 0;font:400 15px/1.9 'Noto Sans JP',sans-serif;color:#333">現場を知ることから始まり、資格を取り、機械を扱い、音と土を読めるようになり、やがて現場を動かす。九建で専門技術者になるまでの道のり。</p>
+  <div style="margin-top:48px;display:grid;grid-template-columns:24px 1fr;column-gap:20px">
+    <sc-for list="{{ steps }}" as="s" hint-placeholder-count="7">
+      <div style="display:flex;flex-direction:column;align-items:center"><span style="width:12px;height:12px;border-radius:50%;background:{{ s.dot }};flex:none;margin-top:8px"></span><span style="width:2px;flex:1;background:{{ s.line }}"></span></div>
+      <div style="padding-bottom:40px"><div style="font:600 24px/1 'Barlow Condensed',sans-serif;letter-spacing:.06em;color:{{ s.color }}">{{ s.en }}</div><p style="margin:8px 0 0;font:500 15px/1.7 'Noto Sans JP',sans-serif">{{ s.ja }}</p></div>
+    </sc-for>
+  </div>
+  <div style="font:10px/1.6 'IBM Plex Mono',monospace;color:#8a8a8a">年数は未記載（確定後に追記）</div>
+</section>
+
+<!-- 07 PEOPLE -->
+<section id="people" data-screen-label="07 PEOPLE" style="padding:72px 20px 88px">
+  <div style="display:flex;align-items:center;gap:10px;font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#d4642b"><span style="width:24px;height:1px;background:#d4642b"></span>PEOPLE</div>
+  <h2 style="margin:20px 0 0;font:700 32px/1.4 'Noto Sans JP',sans-serif">技術を受け継ぐ、<br>人がいる。</h2>
+  <p style="margin:20px 0 0;font:400 15px/1.9 'Noto Sans JP',sans-serif;color:#333">未経験で入った人、他の業界から来た人、県外から来た人。それぞれの入口から技術者になった社員の話。</p>
+  <a href="interview-detail-mobile.html" style="display:block;margin-top:40px"><div style="aspect-ratio:4/5;background:repeating-linear-gradient(135deg,#ececec 0 10px,#e3e3e3 10px 20px);display:flex;align-items:flex-end;padding:12px;color:#6f6f6f;font:10px/1.5 'IBM Plex Mono',monospace">IMG 4:5 / 人物（大）350×438</div><div style="display:flex;gap:6px;margin-top:16px"><span style="font:500 10px/1 'IBM Plex Mono',monospace;padding:7px 8px;border:1px solid #141414">未経験入社</span><span style="font:500 10px/1 'IBM Plex Mono',monospace;padding:7px 8px;border:1px solid #141414">県外出身</span></div><h3 style="margin:12px 0 0;font:700 20px/1.6 'Noto Sans JP',sans-serif">「最初は、機械の音なんて全部同じに聞こえた。」</h3><div style="margin-top:10px;font:400 13px/1.6 'Noto Sans JP',sans-serif;color:#6b6b6b">田中 健太（仮）／ 基礎工事技術者</div></a>
+  <div style="display:grid;gap:28px;margin-top:40px">
+    <a href="interview-detail-mobile.html" style="display:grid;grid-template-columns:120px 1fr;column-gap:16px"><div style="aspect-ratio:3/4;background:repeating-linear-gradient(135deg,#ececec 0 10px,#e3e3e3 10px 20px);display:flex;align-items:flex-end;padding:8px;color:#6f6f6f;font:9px/1.5 'IBM Plex Mono',monospace">IMG 3:4</div><div><span style="font:500 10px/1 'IBM Plex Mono',monospace;padding:7px 8px;border:1px solid #141414;display:inline-block">経験者</span><h3 style="margin:12px 0 0;font:700 15px/1.6 'Noto Sans JP',sans-serif">「前の会社では触らせてもらえなかった機械が、ここにはある。」</h3><div style="margin-top:8px;font:400 12px/1.6 'Noto Sans JP',sans-serif;color:#6b6b6b">佐藤 大輔（仮）／ 施工管理</div></div></a>
+    <a href="interview-detail-mobile.html" style="display:grid;grid-template-columns:120px 1fr;column-gap:16px"><div style="aspect-ratio:3/4;background:repeating-linear-gradient(135deg,#ececec 0 10px,#e3e3e3 10px 20px);display:flex;align-items:flex-end;padding:8px;color:#6f6f6f;font:9px/1.5 'IBM Plex Mono',monospace">IMG 3:4</div><div><span style="font:500 10px/1 'IBM Plex Mono',monospace;padding:7px 8px;border:1px solid #141414;display:inline-block">若手</span><h3 style="margin:12px 0 0;font:700 15px/1.6 'Noto Sans JP',sans-serif">「土の色が変わった瞬間が、分かるようになった。」</h3><div style="margin-top:8px;font:400 12px/1.6 'Noto Sans JP',sans-serif;color:#6b6b6b">中村 翔（仮）／ 基礎工事技術者</div></div></a>
+  </div>
+  <a href="interview-mobile.html" style="display:flex;align-items:center;justify-content:center;height:56px;margin-top:40px;border:1px solid #141414;font:500 15px/1 'Noto Sans JP',sans-serif">社員インタビューを見る　→</a>
+</section>
+
+<!-- 08 CHALLENGE -->
+<section id="challenge" data-screen-label="08 CHALLENGE" style="border-top:1px solid #e5e5e5">
+  <div style="aspect-ratio:4/3;background:repeating-linear-gradient(135deg,#ececec 0 10px,#e3e3e3 10px 20px);display:flex;align-items:flex-end;padding:14px;color:#6f6f6f;font:10px/1.5 'IBM Plex Mono',monospace">IMG 4:3 全幅 / 熊本・九州の生活風景</div>
+  <div style="padding:56px 20px 80px">
+    <div style="display:flex;align-items:center;gap:10px;font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#d4642b"><span style="width:24px;height:1px;background:#d4642b"></span>CHALLENGE</div>
+    <h2 style="margin:20px 0 0;font:700 32px/1.4 'Noto Sans JP',sans-serif">場所を変えて、<br>人生を変える。</h2>
+    <div style="margin-top:24px;font:400 15px/2 'Noto Sans JP',sans-serif;color:#333"><p style="margin:0">今、熊本に住んでいなくてもいい。<br>経験がなくてもいい。</p><p style="margin:20px 0 0">新しい場所で、<br>新しい仕事を始め、<br>自分に残る技術を身につける。</p><p style="margin:20px 0 0">九建は、<br>その一歩を仕事と生活の両面から支えます。</p></div>
+    <div style="display:flex;align-items:center;gap:12px;margin-top:32px;padding-top:20px;border-top:1px solid #141414"><span style="font:600 18px/1 'Barlow Condensed',sans-serif;letter-spacing:.1em">KYUSHU → ALL JAPAN</span><span style="font:500 13px/1 'Noto Sans JP',sans-serif">九州〜全国採用</span></div>
+  </div>
+</section>
+
+<!-- 09 ENVIRONMENT -->
+<section id="environment" data-screen-label="09 ENVIRONMENT" style="padding:88px 20px 80px">
+  <div style="display:flex;align-items:center;gap:10px;font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#d4642b"><span style="width:24px;height:1px;background:#d4642b"></span>ENVIRONMENT</div>
+  <h2 style="margin:20px 0 0;font:700 32px/1.4 'Noto Sans JP',sans-serif">仕事も、<br>住む場所も、<br>ここから。</h2>
+  <div style="margin-top:40px;border:1px solid #141414">
+    <div style="aspect-ratio:4/3;background:repeating-linear-gradient(135deg,#ececec 0 10px,#e3e3e3 10px 20px);display:flex;align-items:flex-end;padding:12px;color:#6f6f6f;font:10px/1.5 'IBM Plex Mono',monospace">IMG 4:3 / 新築社員寮パース</div>
+    <div style="padding:28px 20px 32px">
+      <div style="font:600 14px/1 'Barlow Condensed',sans-serif;letter-spacing:.16em;color:#d4642b">NEW DORMITORY</div>
+      <div style="margin-top:8px;font:600 60px/1 'Barlow Condensed',sans-serif">2027.03 OPEN</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;font:400 13px/1.7 'Noto Sans JP',sans-serif;padding:20px 0;margin-top:20px;border-top:1px solid #dcdcdc;border-bottom:1px solid #dcdcdc"><div><span style="color:#6b6b6b">完成</span><br>2027年3月予定</div><div><span style="color:#6b6b6b">場所</span><br>本社近隣</div><div><span style="color:#6b6b6b">建物</span><br>新築</div><div><span style="color:#6b6b6b">間取り</span><br>1R</div></div>
+      <p style="margin:16px 0 0;font:400 13px/1.9 'Noto Sans JP',sans-serif;color:#333">県外から来る人も、初めて一人暮らしをする人も、仕事と同時に住む場所が整う。<span style="color:#8a8a8a">（入居条件・寮費：詳細確認中）</span></p>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px 16px;margin-top:48px">
+    <div style="border-top:2px solid #141414;padding-top:14px"><div style="font:500 10px/1 'IBM Plex Mono',monospace;color:#6b6b6b">01</div><h3 style="margin:8px 0 0;font:700 16px/1.5 'Noto Sans JP',sans-serif">本社との距離</h3><p style="margin:6px 0 0;font:400 12px/1.8 'Noto Sans JP',sans-serif;color:#8a8a8a">詳細確認中</p></div>
+    <div style="border-top:2px solid #141414;padding-top:14px"><div style="font:500 10px/1 'IBM Plex Mono',monospace;color:#6b6b6b">02</div><h3 style="margin:8px 0 0;font:700 16px/1.5 'Noto Sans JP',sans-serif">生活環境</h3><p style="margin:6px 0 0;font:400 12px/1.8 'Noto Sans JP',sans-serif;color:#8a8a8a">詳細確認中</p></div>
+    <div style="border-top:2px solid #141414;padding-top:14px"><div style="font:500 10px/1 'IBM Plex Mono',monospace;color:#6b6b6b">03</div><h3 style="margin:8px 0 0;font:700 16px/1.5 'Noto Sans JP',sans-serif">福利厚生</h3><p style="margin:6px 0 0;font:400 12px/1.8 'Noto Sans JP',sans-serif;color:#8a8a8a">詳細確認中</p></div>
+    <div style="border-top:2px solid #141414;padding-top:14px"><div style="font:500 10px/1 'IBM Plex Mono',monospace;color:#6b6b6b">04</div><h3 style="margin:8px 0 0;font:700 16px/1.5 'Noto Sans JP',sans-serif">休日</h3><p style="margin:6px 0 0;font:400 12px/1.8 'Noto Sans JP',sans-serif;color:#8a8a8a">詳細確認中</p></div>
+    <div style="border-top:2px solid #141414;padding-top:14px"><div style="font:500 10px/1 'IBM Plex Mono',monospace;color:#6b6b6b">05</div><h3 style="margin:8px 0 0;font:700 16px/1.5 'Noto Sans JP',sans-serif">資格支援</h3><p style="margin:6px 0 0;font:400 12px/1.8 'Noto Sans JP',sans-serif;color:#8a8a8a">詳細確認中</p></div>
+    <div style="border-top:2px solid #141414;padding-top:14px"><div style="font:500 10px/1 'IBM Plex Mono',monospace;color:#6b6b6b">06</div><h3 style="margin:8px 0 0;font:700 16px/1.5 'Noto Sans JP',sans-serif">研修</h3><p style="margin:6px 0 0;font:400 12px/1.8 'Noto Sans JP',sans-serif;color:#8a8a8a">詳細確認中</p></div>
+  </div>
+</section>
+
+<!-- 10 ABOUT -->
+<section id="about" data-screen-label="10 ABOUT" style="padding:72px 20px 80px;border-top:1px solid #e5e5e5">
+  <div style="display:flex;align-items:center;gap:10px;font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#d4642b"><span style="width:24px;height:1px;background:#d4642b"></span>ABOUT</div>
+  <h2 style="margin:20px 0 0;font:700 32px/1.4 'Noto Sans JP',sans-serif">40年以上、<br>地面の下と向き合ってきた。</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;margin-top:40px;border-top:1px solid #141414;border-left:1px solid #141414">
+    <div style="padding:24px 18px;border-right:1px solid #141414;border-bottom:1px solid #141414"><div style="font:600 52px/1 'Barlow Condensed',sans-serif">1980</div><div style="margin-top:10px;font:500 13px/1.5 'Noto Sans JP',sans-serif">創業</div></div>
+    <div style="padding:24px 18px;border-right:1px solid #141414;border-bottom:1px solid #141414"><div style="font:600 52px/1 'Barlow Condensed',sans-serif">2,000<span style="font-size:30px">+</span></div><div style="margin-top:10px;font:500 13px/1.5 'Noto Sans JP',sans-serif">現場実績</div></div>
+    <div style="padding:24px 18px;border-right:1px solid #141414;border-bottom:1px solid #141414"><div style="font:600 52px/1 'Barlow Condensed',sans-serif">40<span style="font-size:22px"> YEARS+</span></div><div style="margin-top:10px;font:500 13px/1.5 'Noto Sans JP',sans-serif">積み重ねてきた経験</div></div>
+    <div style="padding:24px 18px;border-right:1px solid #141414;border-bottom:1px solid #141414"><div style="font:600 40px/1.1 'Barlow Condensed',sans-serif">WEST<br>JAPAN</div><div style="margin-top:10px;font:500 13px/1.5 'Noto Sans JP',sans-serif">西日本を中心に施工</div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px 16px;margin-top:40px">
+    <div><div style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#d4642b">DATA</div><h3 style="margin:8px 0 0;font:700 14px/1.5 'Noto Sans JP',sans-serif">施工・地質データ</h3></div>
+    <div><div style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#d4642b">MACHINE</div><h3 style="margin:8px 0 0;font:700 14px/1.5 'Noto Sans JP',sans-serif">特殊大型重機</h3></div>
+    <div><div style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#d4642b">METHOD</div><h3 style="margin:8px 0 0;font:700 14px/1.5 'Noto Sans JP',sans-serif">多様な工法</h3></div>
+    <div><div style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#d4642b">TRAINING</div><h3 style="margin:8px 0 0;font:700 14px/1.5 'Noto Sans JP',sans-serif">技能研修</h3></div>
+  </div>
+  <a href="#" style="display:inline-flex;gap:10px;margin-top:36px;font:500 14px/1 'Noto Sans JP',sans-serif;border-bottom:1px solid #141414;padding-bottom:8px">コーポレートサイトを見る ↗</a>
+</section>
+
+<!-- 11 RECRUIT -->
+<section id="recruit" data-screen-label="11 RECRUIT" style="padding:72px 20px 80px;border-top:1px solid #141414">
+  <div style="display:flex;align-items:center;gap:10px;font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#d4642b"><span style="width:24px;height:1px;background:#d4642b"></span>RECRUIT</div>
+  <h2 style="margin:20px 0 0;font:700 30px/1.5 'Noto Sans JP',sans-serif">あなたの経験より、<br>これからを聞きたい。</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;margin-top:36px;border-bottom:1px solid #dcdcdc">
+    <button onClick="{{ job0 }}" style="height:52px;border:0;background:transparent;cursor:pointer;font:500 15px/1 'Noto Sans JP',sans-serif;color:{{ jobFg0 }};border-bottom:3px solid {{ jobLine0 }};margin-bottom:-1px">新卒採用</button>
+    <button onClick="{{ job1 }}" style="height:52px;border:0;background:transparent;cursor:pointer;font:500 15px/1 'Noto Sans JP',sans-serif;color:{{ jobFg1 }};border-bottom:3px solid {{ jobLine1 }};margin-bottom:-1px">中途採用</button>
+  </div>
+  <dl style="margin:8px 0 0">
+    <sc-for list="{{ rows }}" as="r" hint-placeholder-count="12">
+      <div style="padding:22px 0;border-bottom:1px solid #dcdcdc"><dt style="font:500 12px/1 'Noto Sans JP',sans-serif;color:#6b6b6b">{{ r.k }}</dt><dd style="margin:10px 0 0;font:400 15px/1.9 'Noto Sans JP',sans-serif;white-space:pre-line">{{ r.v }}</dd></div>
+    </sc-for>
+  </dl>
+  <p style="margin:16px 0 0;font:10px/1.8 'IBM Plex Mono',monospace;color:#8a8a8a">※ 求人票（令和8年6月受付）をもとに記載。掲載前に最新条件を確認。</p>
+  <a href="#entry" style="display:flex;align-items:center;justify-content:center;height:64px;margin-top:40px;background:#d4642b;color:#fff;font:600 17px/1 'Barlow Condensed',sans-serif;letter-spacing:.18em">ENTRY　応募する</a>
+</section>
+
+<!-- 12 FAQ -->
+<section id="faq" data-screen-label="12 FAQ" style="padding:64px 20px 80px;border-top:1px solid #e5e5e5">
+  <div style="display:flex;align-items:center;gap:10px;font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#d4642b"><span style="width:24px;height:1px;background:#d4642b"></span>FAQ</div>
+  <h2 style="margin:20px 0 0;font:700 28px/1.5 'Noto Sans JP',sans-serif">応募前の疑問に、<br>答えます。</h2>
+  <div style="margin-top:32px;border-top:1px solid #141414">
+    <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="10">
+      <div style="border-bottom:1px solid #dcdcdc">
+        <button onClick="{{ f.toggle }}" style="width:100%;display:grid;grid-template-columns:36px 1fr 24px;align-items:start;gap:10px;padding:20px 0;border:0;background:transparent;cursor:pointer;text-align:left;font:500 15px/1.7 'Noto Sans JP',sans-serif;color:#141414"><span style="font:500 11px/2.3 'IBM Plex Mono',monospace;color:#d4642b">Q{{ f.no }}</span><span>{{ f.q }}</span><span style="font:300 22px/1.2 'IBM Plex Mono',monospace;text-align:right">{{ f.icon }}</span></button>
+        <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}"><div style="display:grid;grid-template-columns:36px 1fr;gap:10px;padding:0 0 22px"><span style="font:500 11px/1.9 'IBM Plex Mono',monospace;color:#6b6b6b">A</span><p style="margin:0;font:400 14px/1.9 'Noto Sans JP',sans-serif;color:#333">{{ f.a }}</p></div></sc-if>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<!-- 13 ENTRY -->
+<section id="entry" data-screen-label="13 ENTRY" style="position:relative;padding:96px 20px;background:repeating-linear-gradient(135deg,#dedede 0 10px,#d3d3d3 10px 20px);text-align:center">
+  <div style="position:absolute;top:12px;left:20px;font:9px/1.6 'IBM Plex Mono',monospace;color:#6f6f6f">BG: 現場写真 390×640</div>
+  <div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.3em;color:#d4642b">ENTRY</div>
+  <h2 style="margin:20px 0 0;font:700 36px/1.4 'Noto Sans JP',sans-serif">未来に残る技術を、<br>自分の手に。</h2>
+  <div style="margin-top:28px;font:400 15px/2 'Noto Sans JP',sans-serif;color:#333"><p style="margin:0">経験がなくてもいい。<br>今、熊本に住んでいなくてもいい。</p><p style="margin:16px 0 0">必要なのは、<br>これから何かを身につけたいという意志。</p><p style="margin:16px 0 0">見えない地中を読み、<br>100年先の街を支える技術者へ。</p></div>
+  <a href="#" style="display:flex;align-items:center;justify-content:center;height:68px;margin-top:40px;background:#d4642b;color:#fff;font:600 18px/1 'Barlow Condensed',sans-serif;letter-spacing:.2em">ENTRY　応募する</a>
+</section>
+
+<footer data-screen-label="FOOTER" style="padding:64px 20px 32px;border-top:1px solid #141414">
+  <div style="display:flex;align-items:center;gap:12px"><span style="width:36px;height:36px;background:#141414"></span><div style="font:700 16px/1.3 'Noto Sans JP',sans-serif">九建総合開発<div style="font:400 11px/1.6 'Noto Sans JP',sans-serif;color:#6b6b6b">採用サイト</div></div></div>
+  <nav style="display:grid;grid-template-columns:1fr 1fr;gap:18px 16px;margin-top:40px;font:500 14px/1 'Noto Sans JP',sans-serif"><a href="#work">仕事を知る</a><a href="#skill">技術・成長</a><a href="interview-mobile.html">社員インタビュー</a><a href="#environment">働く環境</a><a href="#recruit">募集要項</a><a href="#faq">FAQ</a></nav>
+  <a href="#entry" style="display:flex;align-items:center;justify-content:center;height:60px;margin-top:40px;background:#d4642b;color:#fff;font:600 16px/1 'Barlow Condensed',sans-serif;letter-spacing:.2em">ENTRY</a>
+  <div style="margin-top:48px;padding-top:20px;border-top:1px solid #dcdcdc;display:flex;flex-direction:column;gap:14px;font:400 12px/1 'Noto Sans JP',sans-serif;color:#6b6b6b"><div style="display:flex;gap:20px"><a href="#" style="color:#6b6b6b">コーポレートサイト</a><a href="#" style="color:#6b6b6b">プライバシーポリシー</a></div><div style="font:400 10px/1 'IBM Plex Mono',monospace;letter-spacing:.06em">© KYUKEN SOGO KAIHATSU CO., LTD.</div></div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:390},&quot;headerAlwaysSolid&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Header&quot;}}">
+class Component extends DCLogic {
+  state = { scrolled: false, eng: 0, job: 0, faq: 0, menu: false };
+  componentDidMount() {
+    this._onScroll = () => { const s = window.scrollY > 40; if (s !== this.state.scrolled) this.setState({ scrolled: s }); };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onScroll();
+    import('./jobs.js').then(m => this.setState({ jobs: m.JOBS }));
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this._onScroll); }
+  renderVals() {
+    const scrolled = this.state.scrolled || this.state.menu || (this.props.headerAlwaysSolid ?? false);
+    const machines = [
+      { no: '01', name: 'パイルドライバー', desc: '既製杭を地中に打ち込む・埋め込むための大型機械。リーダーと呼ばれる高い支柱に沿って杭を垂直に保ちながら施工する。', judge: '杭が支持層に達したかどうかは、打撃音の変化と貫入量の数値、手に伝わる手応えを重ねて人が判断する。' },
+      { no: '02', name: '全周回転掘削機', desc: 'ケーシングチューブを全周回転させながら地中に圧入し、内部の土を掘削する機械。硬い地盤や障害物のある地盤でも高精度に施工できる。', judge: '回転トルクと圧入抵抗の変化、掘り出される土の質を見比べ、地層の切り替わりを読み取る。' },
+      { no: '03', name: 'クローラクレーン', desc: '鉄筋かごや杭材、掘削機器を吊り上げる大型クレーン。基礎工事の現場で、あらゆる重量物を正確な位置へ運ぶ。', judge: '風、地盤の傾き、吊り荷の揺れ。数値化しきれない条件を読み、合図者と息を合わせて動かす。' },
+    ];
+    const jobs = this.state.jobs || [];
+    const rows = jobs[this.state.job] ? jobs[this.state.job].rows.map(r => ({ k: r[0], v: r[1] })) : [];
+    const qa = [
+      ['未経験でも応募できますか？', 'はい。未経験からの入社を前提に、現場・安全・基礎工事の基本から段階的に学べる体制を整えています。'],
+      ['建設業以外からでも応募できますか？', '応募できます。異業種から入社した社員も在籍しています。'],
+      ['資格がなくても応募できますか？', '入社時点で資格は必須ではありません。入社後に必要な資格を取得していきます。'],
+      ['資格取得支援はありますか？', '資格取得の支援制度があります。対象資格・費用負担の詳細は確認中です。'],
+      ['大型重機を操作したことがなくても大丈夫ですか？', '問題ありません。先輩技術者の指導のもと、段階的に機械操作を習得します。'],
+      ['県外から応募できますか？', 'はい。九州〜全国から応募いただけます。2027年3月には本社近隣に新築社員寮が完成予定です。'],
+      ['社員寮には誰が入れますか？', '入居条件は確認中です。決まり次第、こちらに掲載します。'],
+      ['現場はどのエリアですか？', '熊本県熊本市北区の本社を拠点に、西日本エリアを中心とした各地の現場です。'],
+      ['出張はありますか？', '現場の所在地によっては出張があります。頻度・期間の詳細は確認中です。'],
+      ['選考の流れを教えてください。', '中途採用は書類選考のあと面接を2回行います。新卒採用は統一応募書類による書類選考と個別面接です。筆記試験はありません。'],
+    ];
+    const faqs = qa.map((x, i) => ({ no: String(i + 1).padStart(2, '0'), q: x[0], a: x[1], open: this.state.faq === i, icon: this.state.faq === i ? '−' : '+', toggle: () => this.setState(s => ({ faq: s.faq === i ? null : i })) }));
+    const stepDefs = [['START', '未経験から入社'], ['KNOW', '現場・安全・基礎工事を知る'], ['LICENSE', '資格取得'], ['OPERATE', '大型機械を扱う'], ['READ', '音・振動・土から状況を読む'], ['JUDGE', '施工判断'], ['LEAD', '施工管理・現場を動かす']];
+    const steps = stepDefs.map((s, i) => ({ en: s[0], ja: s[1], dot: i === 0 || i === 6 ? '#d4642b' : '#141414', line: i === 6 ? 'transparent' : '#141414', color: i === 6 ? '#d4642b' : '#141414' }));
+    const v = {
+      headerBg: scrolled ? 'rgba(255,255,255,.96)' : 'transparent',
+      headerLine: scrolled ? '1px solid #e5e5e5' : '1px solid transparent',
+      menuOpen: this.state.menu, toggleMenu: () => this.setState(s => ({ menu: !s.menu })),
+      eng: machines[this.state.eng], rows, faqs, steps,
+    };
+    [0, 1, 2].forEach(i => { v['eng' + i] = () => this.setState({ eng: i }); v['engBg' + i] = this.state.eng === i ? '#141414' : '#fff'; v['engFg' + i] = this.state.eng === i ? '#fff' : '#141414'; });
+    [0, 1].forEach(i => { v['job' + i] = () => this.setState({ job: i }); v['jobFg' + i] = this.state.job === i ? '#141414' : '#8a8a8a'; v['jobLine' + i] = this.state.job === i ? '#141414' : 'transparent'; });
+    return v;
+  }
+}
+</script>
+</body>
+</html>
