@@ -30,7 +30,7 @@
     </div>
     <div style="display:flex;gap:8px;margin-top:72px;padding-bottom:24px;border-bottom:1px solid #141414">
       <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="5">
-        <button onClick="{{ t.select }}" style="height:48px;padding:0 24px;border:1px solid #141414;cursor:pointer;background:{{ t.bg }};color:{{ t.fg }};font:500 14px/1 'Noto Sans JP',sans-serif;letter-spacing:.04em;display:flex;align-items:center;gap:10px">{{ t.label }}<span style="font:400 11px/1 'IBM Plex Mono',monospace;opacity:.7">{{ t.count }}</span></button>
+        <button onClick="{{ t.select }}" style="height:48px;padding:0 24px;border:1px solid #141414;cursor:pointer;background:{{ t.bg }};color:{{ t.fg }};font:500 14px/1 'Noto Sans JP',sans-serif;letter-spacing:.04em">{{ t.label }}</button>
       </sc-for>
     </div>
   </div>
@@ -38,16 +38,18 @@
 
 <section data-screen-label="Interview list" style="padding:56px 100px 140px">
   <div style="max-width:1240px;margin:0 auto">
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:64px 24px">
-      <sc-for list="{{ people }}" as="p" hint-placeholder-count="9">
-        <a href="interview-detail-desktop.html" style="display:block">
-          <div style="aspect-ratio:3/4;background:repeating-linear-gradient(135deg,#ececec 0 10px,#e3e3e3 10px 20px);display:flex;align-items:flex-end;padding:14px;color:#6f6f6f;font:11px/1.5 'IBM Plex Mono',monospace">IMG 3:4 397×529 / 現場での人物 {{ p.no }}</div>
-          <div style="display:flex;gap:8px;margin-top:20px;flex-wrap:wrap">
-            <sc-for list="{{ p.tagList }}" as="tg" hint-placeholder-count="2"><span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;padding:8px 10px;border:1px solid #141414">{{ tg }}</span></sc-for>
+    <div style="display:grid;border-top:1px solid #141414">
+      <sc-for list="{{ people }}" as="p" hint-placeholder-count="4">
+        <div style="display:grid;grid-template-columns:7fr 5fr;column-gap:48px;padding:56px 0;border-bottom:1px solid #dcdcdc;align-items:center">
+          <a href="interview-detail-desktop.html" style="display:block;aspect-ratio:16/10;background:repeating-linear-gradient(135deg,#ececec 0 10px,#e3e3e3 10px 20px);display:flex;align-items:flex-end;padding:16px;color:#6f6f6f;font:11px/1.5 'IBM Plex Mono',monospace">IMG 16:10 695×434 / 現場での人物（横構図） {{ p.no }}</a>
+          <div>
+            <div style="display:flex;align-items:center;gap:16px"><span style="font:600 28px/1 'Barlow Condensed',sans-serif;color:#d4642b">{{ p.no }}</span><sc-for list="{{ p.tagList }}" as="tg" hint-placeholder-count="1"><span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;padding:8px 10px;border:1px solid #141414">{{ tg }}</span></sc-for></div>
+            <h3 style="margin:24px 0 0;font:700 26px/1.5 'Noto Sans JP',sans-serif">{{ p.title }}</h3>
+            <p style="margin:20px 0 0;font:400 15px/1.9 'Noto Sans JP',sans-serif;color:#333">{{ p.lead }}</p>
+            <div style="margin-top:20px;font:400 13px/1.6 'Noto Sans JP',sans-serif;color:#6b6b6b">{{ p.name }}／ {{ p.role }}</div>
+            <a href="interview-detail-desktop.html" style="display:inline-flex;align-items:center;justify-content:center;height:56px;padding:0 32px;margin-top:32px;border:1px solid #141414;font:500 14px/1 'Noto Sans JP',sans-serif;letter-spacing:.04em" style-hover="background:#141414;color:#fff">インタビューを読む　→</a>
           </div>
-          <h3 style="margin:16px 0 0;font:700 20px/1.6 'Noto Sans JP',sans-serif">{{ p.title }}</h3>
-          <div style="margin-top:12px;font:400 13px/1.6 'Noto Sans JP',sans-serif;color:#6b6b6b">{{ p.name }}／ {{ p.role }}</div>
-        </a>
+        </div>
       </sc-for>
     </div>
   </div>

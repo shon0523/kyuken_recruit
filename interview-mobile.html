@@ -27,20 +27,22 @@
   <p style="margin:24px 0 0;font:400 15px/1.9 'Noto Sans JP',sans-serif;color:#333">未経験で入った人、他の業界から来た人、県外から来た人。入口は違っても、全員が音と土を読む技術者になった。九建で働く社員の話を聞きました。</p>
   <div style="display:flex;gap:8px;margin:48px -20px 0;padding:0 20px 20px;overflow-x:auto;border-bottom:1px solid #141414">
     <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="5">
-      <button onClick="{{ t.select }}" style="flex:none;height:44px;padding:0 16px;border:1px solid #141414;cursor:pointer;background:{{ t.bg }};color:{{ t.fg }};font:500 13px/1 'Noto Sans JP',sans-serif;display:flex;align-items:center;gap:8px">{{ t.label }}<span style="font:400 10px/1 'IBM Plex Mono',monospace;opacity:.7">{{ t.count }}</span></button>
+      <button onClick="{{ t.select }}" style="flex:none;height:44px;padding:0 16px;border:1px solid #141414;cursor:pointer;background:{{ t.bg }};color:{{ t.fg }};font:500 13px/1 'Noto Sans JP',sans-serif">{{ t.label }}</button>
     </sc-for>
   </div>
 </section>
 
 <section data-screen-label="Interview list" style="padding:40px 20px 96px">
-  <div style="display:grid;gap:48px">
-    <sc-for list="{{ people }}" as="p" hint-placeholder-count="9">
-      <a href="interview-detail-mobile.html" style="display:block">
-        <div style="aspect-ratio:4/5;background:repeating-linear-gradient(135deg,#ececec 0 10px,#e3e3e3 10px 20px);display:flex;align-items:flex-end;padding:12px;color:#6f6f6f;font:10px/1.5 'IBM Plex Mono',monospace">IMG 4:5 350×438 / 人物 {{ p.no }}</div>
-        <div style="display:flex;gap:6px;margin-top:16px;flex-wrap:wrap"><sc-for list="{{ p.tagList }}" as="tg" hint-placeholder-count="2"><span style="font:500 10px/1 'IBM Plex Mono',monospace;padding:7px 8px;border:1px solid #141414">{{ tg }}</span></sc-for></div>
-        <h3 style="margin:12px 0 0;font:700 19px/1.6 'Noto Sans JP',sans-serif">{{ p.title }}</h3>
-        <div style="margin-top:10px;font:400 13px/1.6 'Noto Sans JP',sans-serif;color:#6b6b6b">{{ p.name }}／ {{ p.role }}</div>
-      </a>
+  <div style="display:grid;border-top:1px solid #141414">
+    <sc-for list="{{ people }}" as="p" hint-placeholder-count="4">
+      <div style="padding:40px 0;border-bottom:1px solid #dcdcdc">
+        <a href="interview-detail-mobile.html" style="display:flex;aspect-ratio:16/10;background:repeating-linear-gradient(135deg,#ececec 0 10px,#e3e3e3 10px 20px);align-items:flex-end;padding:12px;color:#6f6f6f;font:10px/1.5 'IBM Plex Mono',monospace">IMG 16:10 350×219 / 人物（横構図） {{ p.no }}</a>
+        <div style="display:flex;align-items:center;gap:12px;margin-top:20px"><span style="font:600 22px/1 'Barlow Condensed',sans-serif;color:#d4642b">{{ p.no }}</span><sc-for list="{{ p.tagList }}" as="tg" hint-placeholder-count="1"><span style="font:500 10px/1 'IBM Plex Mono',monospace;padding:7px 8px;border:1px solid #141414">{{ tg }}</span></sc-for></div>
+        <h3 style="margin:14px 0 0;font:700 19px/1.6 'Noto Sans JP',sans-serif">{{ p.title }}</h3>
+        <p style="margin:12px 0 0;font:400 14px/1.9 'Noto Sans JP',sans-serif;color:#333">{{ p.lead }}</p>
+        <div style="margin-top:12px;font:400 12px/1.6 'Noto Sans JP',sans-serif;color:#6b6b6b">{{ p.name }}／ {{ p.role }}</div>
+        <a href="interview-detail-mobile.html" style="display:flex;align-items:center;justify-content:center;height:52px;margin-top:24px;border:1px solid #141414;font:500 14px/1 'Noto Sans JP',sans-serif">インタビューを読む　→</a>
+      </div>
     </sc-for>
   </div>
 </section>
